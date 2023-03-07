@@ -25,7 +25,8 @@ module.exports = {
       preprocessor, in this case SASS, use the second one*/
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        include: path.resolve("assets"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ], 
   },  
